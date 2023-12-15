@@ -156,7 +156,7 @@ public class Mapper {
 
 
     private void editImg() {
-        File file = new File("E:/Java/KohonenWeb/img.jpg");
+        File file = new File("img.jpg");
         try {
             BufferedImage img = ImageIO.read(file);
             BufferedImage i2 = new BufferedImage(img.getWidth(), img.getHeight(), img.getType());
@@ -168,7 +168,7 @@ public class Mapper {
                     i2.setRGB(i, j, newColor.getRGB());
                 }
             }
-            File out = new File("E:/Java/KohonenWeb/out" + System.currentTimeMillis() + ".jpg");
+            File out = new File("out" + System.currentTimeMillis() + ".jpg");
             ImageIO.write(i2, "jpg", out);
         } catch (IOException e) {
             e.printStackTrace();
